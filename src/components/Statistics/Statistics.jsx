@@ -9,11 +9,13 @@ const Statistics = ({
 }) => {
   return (
     <>
-      <p>Good: {goodValue}</p>
-      <p>Neutral: {neutralValue}</p>
-      <p>Bad: {badValue}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {goodPercentage}%</p>
+      <p className={styles.statisticText}>Good: {goodValue}</p>
+      <p className={styles.statisticText}>Neutral: {neutralValue}</p>
+      <p className={styles.statisticText}>Bad: {badValue}</p>
+      <p className={styles.statisticText}>Total: {total}</p>
+      <p className={styles.statisticTotal}>
+        Positive feedback: {goodPercentage}%
+      </p>
     </>
   );
 };

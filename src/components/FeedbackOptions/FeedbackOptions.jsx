@@ -2,7 +2,11 @@ import styles from '../FeedbackOptions/FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, leaveFeedback }) => {
   const buttonElements = options.map(name => (
-    <button onClick={() => leaveFeedback(name)} key={name}>
+    <button
+      className={styles.feedbackBtn}
+      onClick={() => leaveFeedback(name)}
+      key={name}
+    >
       {name}
     </button>
   ));

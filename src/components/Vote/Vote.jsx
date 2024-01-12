@@ -46,7 +46,7 @@ class Vote extends Component {
         <Section title="Please leave feedback">
           <div>
             <FeedbackOptions
-              options={Vote.options}
+              options={Vote.voteOptions}
               leaveFeedback={this.leaveFeedback}
             />
           </div>
