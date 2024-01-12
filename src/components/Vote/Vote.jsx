@@ -59,6 +59,7 @@ class Vote extends Component {
               goodValue={goodValue}
               neutralValue={neutralValue}
               badValue={badValue}
+              goodPercentage={goodPercentage}
               total={total}
             />
           )}

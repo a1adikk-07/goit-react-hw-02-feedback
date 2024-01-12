@@ -1,4 +1,4 @@
-import style from '../FeedbackOptions/FeedbackOptions.module.css';
+import styles from '../FeedbackOptions/FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, leaveFeedback }) => {
   const buttonElements = options.map(name => (
@@ -6,6 +6,7 @@ const FeedbackOptions = ({ options, leaveFeedback }) => {
       {name}
     </button>
   ));
+
   return buttonElements;
 };
 
