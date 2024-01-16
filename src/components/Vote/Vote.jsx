@@ -4,7 +4,7 @@ import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Statistics from '../Statistics/Statistics';
 
 class Vote extends Component {
-  static voteOptions = ['good', 'neutral', 'bad'];
+  // static voteOptions = ['good', 'neutral', 'bad'];
   state = {
     good: 0,
     neutral: 0,
@@ -36,16 +36,16 @@ class Vote extends Component {
   render() {
     const total = this.countTotalFeedback();
     const goodPercentage = this.countPositiveFeedback('good');
-    const goodValue = this.state['good'];
-    const neutralValue = this.state['neutral'];
-    const badValue = this.state['bad'];
+    // const goodValue = this.state['good'];
+    // const neutralValue = this.state['neutral'];
+    // const badValue = this.state['bad'];
 
     return (
       <div>
         <Section title="Please leave feedback">
           <div>
             <FeedbackOptions
-              options={Vote.voteOptions}
+              options={(Object = this.state)}
               leaveFeedback={this.leaveFeedback}
             />
           </div>
@@ -55,9 +55,9 @@ class Vote extends Component {
             'No feedback given'
           ) : (
             <Statistics
-              goodValue={goodValue}
-              neutralValue={neutralValue}
-              badValue={badValue}
+              goodValue={this.state.good}
+              neutralValue={this.state.neutral}
+              badValue={this.state.bad}
               goodPercentage={goodPercentage}
               total={total}
             />
