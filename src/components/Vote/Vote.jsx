@@ -45,7 +45,7 @@ class Vote extends Component {
         <Section title="Please leave feedback">
           <div>
             <FeedbackOptions
-              options={(Object = this.state)}
+              options={Object.keys(this.state)}
               leaveFeedback={this.leaveFeedback}
             />
           </div>
